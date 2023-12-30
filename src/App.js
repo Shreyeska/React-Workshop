@@ -1,17 +1,31 @@
-
 import './App.css';
-//import Main from './Main';
-//import ClassParent from './Class';
-import Display from './Display';
+// import ClassParent from './Class.jsx';
+// import Comp from './component.jsx';
+// import Display from './Display';
+// import Main from './Main.jsx';
 
+import Header from './Header.jsx';
+import Sidenav from './Sidenav.jsx';
+import Footer from './Footer.jsx';
+import MainContent from './Maincontent.jsx';
+import './assignment.css';
 function App() {
   return (
     <div className="App">
       {/* <Main/> */}
       {/* <ClassParent/> */}
-      <Display/>
+      {/* <Comp/> */}
+      {/* <Display/> */}
+
+      <Header title="Header"/>
+      <div className= "Mid">
+        <Sidenav title="Side Nav"/>
+        <MainContent title="Main Content"/>
+      </div>
+      <Footer title="Footer"/>
     </div>
   );
 }
+
 
 export default App;
