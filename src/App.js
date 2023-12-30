@@ -1,31 +1,33 @@
 import './App.css';
 // import ClassParent from './Class.jsx';
-// import Comp from './component.jsx';
 // import Display from './Display';
 // import Main from './Main.jsx';
-
-import Header from './Header.jsx';
-import Sidenav from './Sidenav.jsx';
-import Footer from './Footer.jsx';
-import MainContent from './Maincontent.jsx';
-import './assignment.css';
+// import Header from './Header.jsx';
+// import Sidenav from './Sidenav.jsx';
+// import Footer from './Footer.jsx';
+// import MainContent from './Maincontent.jsx';
+// import './assignment.css';
+//import UseStateWithObject from './UseStateWithObject.jsx';
+//import ClickCounter from './ClickCounter.jsx';
+import ArrayList from './ArrayList.jsx';
 function App() {
   return (
     <div className="App">
       {/* <Main/> */}
       {/* <ClassParent/> */}
-      {/* <Comp/> */}
+  
       {/* <Display/> */}
+      {/* <UseStateWithObject/> */}
+      {/* <ClickCounter/> */}
+    <ArrayList/>
 
-      <Header title="Header"/>
+      {/* <Header title="Header"/>
       <div className= "Mid">
         <Sidenav title="Side Nav"/>
         <MainContent title="Main Content"/>
       </div>
-      <Footer title="Footer"/>
+      <Footer title="Footer"/> */}
     </div>
   );
 }
-
-
 export default App;
