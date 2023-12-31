@@ -62,17 +62,13 @@ const TodoApp = (props) => {
                       checkedItem.indexOf(index) != -1 ? "line-through" : "",
                   }}
                 >
-                  {index} - {todo}
-                </p>
+                  {index + 1} - {todo}
+                
 
-                {/* <button onClick={() => handleDelete(todo, index)}>
+                  &nbsp;&nbsp;&nbsp;<button onClick={() => handleDelete(todo, index)}>
                   Delete
-                </button> */}
-                {"isChecked value: " +
-                  isChecked +
-                  " - " +
-                  "checkedItem - " +
-                  checkedItem}
+                </button>
+                </p>
               </li>
             </>
           );
