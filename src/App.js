@@ -9,7 +9,8 @@ import './App.css';
 // import './assignment.css';
 //import UseStateWithObject from './UseStateWithObject.jsx';
 //import ClickCounter from './ClickCounter.jsx';
-import ArrayList from './ArrayList.jsx';
+//import ArrayList from './ArrayList.jsx';
+import TodoApp from './TodoApp.jsx';
 function App() {
   return (
     <div className="App">
@@ -19,7 +20,8 @@ function App() {
       {/* <Display/> */}
       {/* <UseStateWithObject/> */}
       {/* <ClickCounter/> */}
-    <ArrayList/>
+    {/* <ArrayList/> Day2 Assignment 2 */}
+    <TodoApp/>
 
       {/* <Header title="Header"/>
       <div className= "Mid">
