@@ -15,7 +15,7 @@ const ArrayList= (props) => {
       />
       <button onClick={() => {
         setLists([...lists, { id: sn++, name: name }
-        ]);setName("")
+        ]);setName("");
       }}>Add a list </button>
       <ul>
         {lists.map(list => (

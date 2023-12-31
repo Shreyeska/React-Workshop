@@ -1,4 +1,5 @@
 import './App.css';
+import GuesstheNumber from './GuesstheNumber';
 // import ClassParent from './Class.jsx';
 // import Display from './Display';
 // import Main from './Main.jsx';
@@ -8,9 +9,10 @@ import './App.css';
 // import MainContent from './Maincontent.jsx';
 // import './assignment.css';
 //import UseStateWithObject from './UseStateWithObject.jsx';
-//import ClickCounter from './ClickCounter.jsx';
-//import ArrayList from './ArrayList.jsx';
-import TodoApp from './TodoApp.jsx';
+// import ClickCounter from './ClickCounter.jsx';
+// import ArrayList from './ArrayList.jsx';
+// import TodoApp from './TodoApp.jsx';
+//import GuesstheNumber from './GuesstheNumber';
 function App() {
   return (
     <div className="App">
@@ -19,9 +21,11 @@ function App() {
   
       {/* <Display/> */}
       {/* <UseStateWithObject/> */}
-      {/* <ClickCounter/> */}
-    {/* <ArrayList/> Day2 Assignment 2 */}
-    <TodoApp/>
+    {/* Day 2 Assignment 1  <ClickCounter/> */}
+      {/* Day2 Assignment 2 <ArrayList/> 
+    Day 2 Assignment 3<TodoApp/> */}
+    <GuesstheNumber/>
+
 
       {/* <Header title="Header"/>
       <div className= "Mid">

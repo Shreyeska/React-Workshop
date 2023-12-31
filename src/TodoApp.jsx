@@ -1,57 +1,85 @@
-import React, { useState } from 'react';
-const TodoApp = () => {
-  const [tasks, setTasks] = useState([]);
-  const [newTask, setNewTask] = useState('');
-  const addTask = () => {
-    if (newTask.trim() !== '') {
-      setTasks([...tasks, { text: newTask, completed: false }]);
-      setNewTask('');
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+
+const TodoApp = (props) => {
+  //a text input and a ‘add’ button
+  const [inputText, setInputText] = useState("");
+  const [todoList, setTodoList] = useState([]);
+
+  const [isChecked, setIsChecked] = useState(false);
+  const [checkedItem, setCheckedItem] = useState([]);
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setInputText(value);
+  };
+  const handleButtonClick = () => {
+    if (inputText !== "") {
+      setInputText("");
+      setTodoList([...todoList, inputText]);
+    } else {
+      alert("Please enter a value");
     }
   };
-  const deleteTask = (index) => {
-    const updatedTasks = [...tasks];
-    updatedTasks.splice(index, 1);
-    setTasks(updatedTasks);
+  const handleDelete = (todo, index) => {
+    const newList = [...todoList];
+    newList.splice(index, 1);
+    setTodoList(newList);
   };
-  const toggleCompletion = (index) => {
-    const updatedTasks = [...tasks];
-    updatedTasks[index].completed = !updatedTasks[index].completed;
-    setTasks(updatedTasks);
+  const handleCheckbox = (e, index) => {
+    //   console.log(e)
+    const value = e.target.checked;
+    setIsChecked(value);
+
+    if (value) setCheckedItem([...checkedItem, index]);
+    else {
+      const newCheckedList = [...checkedItem];
+      const i = newCheckedList.indexOf(index);
+      newCheckedList.splice(i, 1);
+
+      setCheckedItem(newCheckedList);
+    }
   };
   return (
     <div>
-      <div>
-        <h1> To Do App </h1>
-        <input
-          type="text"
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
-          placeholder="Enter your task"
-        />
-        <button onClick={addTask}>Add Task</button>
-      </div>
+      <h1>TodoApp</h1>
+      <input type="text" value={inputText} onChange={handleInputChange} />
+
+      <button onClick={handleButtonClick}>Add</button>
       <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>
-            <input
-              type="checkbox"
-              checked={task.completed}
-              onChange={() => toggleCompletion(index)}
-            />
-            <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
-              {task.text}
-            </span>
-            <button onClick={() => deleteTask(index)}>Delete</button>
-          </li>
-        ))}
+        {todoList.map((todo, index) => {
+          console.log(checkedItem.indexOf(index));
+          return (
+            <>
+              <li key={index}>
+                <input
+                  type="checkbox"
+                  onChange={(e) => handleCheckbox(e, index)}
+                />
+                <p
+                  style={{
+                    textDecoration:
+                      checkedItem.indexOf(index) != -1 ? "line-through" : "",
+                  }}
+                >
+                  {index} - {todo}
+                </p>
+
+                {/* <button onClick={() => handleDelete(todo, index)}>
+                  Delete
+                </button> */}
+                {"isChecked value: " +
+                  isChecked +
+                  " - " +
+                  "checkedItem - " +
+                  checkedItem}
+              </li>
+            </>
+          );
+        })}
       </ul>
     </div>
   );
 };
+
 export default TodoApp;
-
-
-
-
-
-
