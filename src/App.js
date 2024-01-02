@@ -1,4 +1,5 @@
 import './App.css';
+import BaseComponent from './Basecomponents';
 //import GuesstheNumber from './GuesstheNumber';
 // import ClassParent from './Class.jsx';
 // import Display from './Display';
@@ -11,7 +12,7 @@ import './App.css';
 //import UseStateWithObject from './UseStateWithObject.jsx';
 // import ClickCounter from './ClickCounter.jsx';
 // import ArrayList from './ArrayList.jsx';
- import TodoApp from './TodoApp.jsx';
+// import TodoApp from './TodoApp.jsx';
 //import GuesstheNumber from './GuesstheNumber';
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
       {/* <UseStateWithObject/> */}
     {/* Day 2 Assignment 1  <ClickCounter/> */}
       {/* Day2 Assignment 2 <ArrayList/>*/} 
-    Day 2 Assignment 3<TodoApp/> 
+    {/* Day 2 Assignment 3<TodoApp/>  */}
     {/* <GuesstheNumber/> */}
 
 
@@ -33,6 +34,7 @@ function App() {
         <MainContent title="Main Content"/>
       </div>
       <Footer title="Footer"/> */}
+      <BaseComponent/>
     </div>
   );
 }
